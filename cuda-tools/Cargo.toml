@@ -1,0 +1,17 @@
+[package]
+name = "cuda-tools"
+version = "0.1.0"
+authors = ["Masato Mouri <13274198+mouri111@users.noreply.github.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[target.'cfg(not(target_arch = "nvptx64"))'.build-dependencies]
+bindgen = "0.52.0"
+
+[dependencies]
+# failure = "0.1.6"
+
+[target.'cfg(not(target_arch = "nvptx64"))'.dependencies]
+bindgen = "0.52.0"
+backtrace = "0.3.40"
